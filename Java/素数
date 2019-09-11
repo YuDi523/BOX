@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Prime {
+
+	public static void main(String[] args) {
+	
+		Scanner in = new Scanner(System.in);
+		int num,end;
+		boolean flag=true;
+		System.out.print("请输入一个正整数:");
+		num = in.nextInt();
+		end = (int)Math.sqrt(num);
+		for(int i=2;i<end+1;i++) {
+			if (num%i==0){
+				flag=false;
+				break;
+			}	
+	}
+		if(flag &&num !=1) {
+				System.out.printf("%d是素数。",num);
+			}
+		else {
+			System.out.printf("%d不是素数", num);
+		}
+		}
+}
