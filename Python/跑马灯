@@ -1,0 +1,16 @@
+import os
+import time
+
+def main():
+    start = time.time()
+    end = time.time()
+    ch1='>'
+    while end-start<2:
+
+        print(ch1,end='')
+        time.sleep(0.2)
+        end = time.time()
+    os.system('cls')
+    print("加载100%")
+if __name__ == '__main__':
+    main()
