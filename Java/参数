@@ -1,0 +1,56 @@
+class Dialog{
+	protected String title;
+	public Dialog() {
+		System.out.println("父类dialog的构造函数");
+	}
+	public void show() {
+		System.out.println(title+"对话框显示");
+	}
+}
+class _FontDialog extends Dialog{
+	private String fontName;
+	public _FontDialog(String title,String fontName) {
+		System.out.println("子类FontDialog的构造函数");
+		this.title = title;
+		this.fontName=fontName;
+	}
+}
+public class Lab1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		_FontDialog fd= new _FontDialog("字体","宋体");
+	}
+
+}
+
+//以下程序有错
+class Dialog{
+	protected String title;
+	//public Dialog() {}
+	public Dialog(String title) {
+		this.title=title;
+	}
+	public void show() {
+		System.out.println(title+"对话框显示");
+	}
+}
+class _FontDialog extends Dialog{
+	private String fontName;
+	public _FontDialog(String title,String fontName) {
+		//super(title);
+		System.out.println("子类FontDialog的构造函数");
+		this.title = title;
+		this.fontName=fontName;
+	}
+}
+public class Lab1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		_FontDialog fd= new _FontDialog("字体","宋体");
+	}
+
+}
+
+“super(title)”必须写在子类构造函数的第一句，传入参数必须和父类构造函数中的参数列表类型匹配。
