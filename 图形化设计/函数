@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+import numpy as np
+"""x=[0,0,5,10,15,15,10,5]
+y=[5,10,15,15,10,5,0,0]
+plt.fill(x,y,color="cornflowerblue")#调用函数fill()来完成绘制有序数对，参数color来完成颜色填充
+plt.xlim(-1,16)         #位置调整
+plt.ylim(-1,16)
+plt.xticks(np.arange(0,16,5))
+plt.yticks(np.arange(0,16,5))
+plt.show()"""
+x=np.linspace(0,2*np.pi,500)
+y=np.sin(x)
+plt.fill(x,y,color="cornflowerblue",alpha=0.4)
+plt.plot(x,y,color="cornflowerblue",alpha=0.8)
+plt.plot(x[0],x[-1],[y[0],y[-1]],color="cornflowerblue",alpha=0.8)
+plt.xlim(0,2*np.pi)
+plt.ylim(-1,1,1.1)
+plt.show()
+
+这是一个新的内容，目前在学习中，不知道会在哪里停下来，不知道
