@@ -1,0 +1,26 @@
+from random import randint
+
+def binary_search(list,item):
+    low=0
+    high=len(list)-1
+    while low<=high:
+        mid=int((low+high)/2)
+        guess = list[mid]
+        if guess==item:
+            return mid
+        elif guess>item:
+            high=mid-1
+        else:
+            low=mid+1
+    return None
+
+list0=[]
+for i in range(0,100):
+    num=i
+    list0.append(num)
+guess0=randint(0,100)
+print(guess0)
+demo=binary_search(list0,guess0)
+print(list0[demo])
+
+二分法自娱自乐
